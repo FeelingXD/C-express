@@ -1,2 +1,2 @@
 # C-express
-private study 
+C언어 express 
