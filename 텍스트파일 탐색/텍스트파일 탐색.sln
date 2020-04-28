@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "텍스트파일 탐색", "텍스트파일 탐색\텍스트파일 탐색.vcxproj", "{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Debug|x64.ActiveCfg = Debug|x64
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Debug|x64.Build.0 = Debug|x64
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Debug|x86.ActiveCfg = Debug|Win32
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Debug|x86.Build.0 = Debug|Win32
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Release|x64.ActiveCfg = Release|x64
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Release|x64.Build.0 = Release|x64
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Release|x86.ActiveCfg = Release|Win32
+		{AFBD83E5-5539-4F6F-8D12-40EA49DE0D61}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C623208-52DC-4368-9C2C-742B524FBA4E}
+	EndGlobalSection
+EndGlobal

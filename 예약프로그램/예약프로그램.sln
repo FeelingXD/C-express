@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "예약프로그램", "예약프로그램\예약프로그램.vcxproj", "{7BA97DAA-668E-485E-99F0-B47EED1CAB70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Debug|x64.ActiveCfg = Debug|x64
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Debug|x64.Build.0 = Debug|x64
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Debug|x86.Build.0 = Debug|Win32
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Release|x64.ActiveCfg = Release|x64
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Release|x64.Build.0 = Release|x64
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Release|x86.ActiveCfg = Release|Win32
+		{7BA97DAA-668E-485E-99F0-B47EED1CAB70}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6130AD5D-FE20-479C-B3B6-E2706CE9B435}
+	EndGlobalSection
+EndGlobal
