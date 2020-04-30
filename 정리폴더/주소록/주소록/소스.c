@@ -13,7 +13,7 @@ void menu();
 PERSON get_record();
 void print_record(FILE *fp);
 void add_record(FILE *fp);
-void search_record(FILE *fp);
+int search_record(FILE *fp);
 void update_record(FILE *fp);
 int main() {
 
@@ -84,7 +84,7 @@ void print_record(PERSON data)
 	printf("ÀÌ¸§ : %s\n", data.name); printf("ÁÖ¼Ò : %s\n", data.adress);
 	printf("ÈÞ´ëÆù : %s\n", data.mobilephone); printf("Æ¯Â¡: %s\n", data.desc);
 }
-void search_record(FILE *fp)
+int search_record(FILE *fp)
 {
 	char name[SIZE];
 	PERSON data;
@@ -111,6 +111,10 @@ void search_record(FILE *fp)
 }
 void update_record(FILE *fp)
 {
+	int loc = search_record(fp);
+
+
+
 
 
 }
