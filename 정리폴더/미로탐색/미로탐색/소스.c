@@ -39,9 +39,11 @@ void push(StackType *a, element item)
 void printStack(StackType *a) {
 
 	int i = a->top;
-	for (; 0 <= i; i--) {
-		printf("%d 번째 원소 %d\n", i, a->stack[i]);
+	for (; -1< i; i--)
+	{
+		printf("%d 번째 원소 {%hd, %hd}\n", i, a->stack[i].r, a->stack[i].c);
 	}
+
 }
 element pop(StackType *a) {
 	if (is_empty(a))
@@ -65,7 +67,7 @@ element peek(StackType *a) {
 }
 element here = { 1,0 }, entry = { 1,0 };
 char maze[MAZE_SIZE][MAZE_SIZE] = {
-	{'1','1','1,','1','1','1'},
+	{'1','1','1','1','1','1'},
 	{'e','0','1','0','0','1'},
 	{'1','0','0','0','1','1'},
 	{'1','0','1','0','1','1'},
@@ -102,7 +104,8 @@ void main() {
 		maze_print(maze);
 		push_loc(&a, r - 1, c); push_loc(&a, r + 1, c);//위, 아래
 		push_loc(&a, r - 1, c); push_loc(&a, r, c + 1);// 왼쪽, 오른쪽
-
+		
+		printStack(&a);
 	if (is_empty(&a)) {
 		printf("실패\n"); return;
 	}
