@@ -72,5 +72,4 @@ void main() {
 	printf("2017422 °íÁö¹Î");
 	getchar();
 
-
 }

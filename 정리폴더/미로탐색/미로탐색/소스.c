@@ -110,4 +110,8 @@ void main() {
 		here = pop(&a);
 	}
 	printf("성공\n");
+	printf("20174222 고지민 \n");
+	system("pause");
+
+
 }
