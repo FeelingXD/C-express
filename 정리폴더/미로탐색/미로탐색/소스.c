@@ -2,53 +2,57 @@
 #define MAZE_SIZE 6
 #include <stdio.h>
 //typedef int element;
-typedef struct {
+typedef struct
+{
 	short r; // row #
 	short c; // column#
-}element;
+} element;
 
-typedef struct {
+typedef struct
+{
 	element stack[MAX_STACK_SIZE];
 	int top;
-}StackType;
+} StackType;
+
 void init_stack(StackType *a)
 {
 	a->top = -1;
 }
-//°ø¹é °ËÃâ
+//ê³µë°± ê²€ì¶œ
 int is_empty(StackType *a)
 {
 	return(a->top == -1);
 }
-//Æ÷È­ »óÅÂ°ËÃâ
+//í¬í™” ìƒíƒœê²€ì¶œ
 int is_full(StackType *a)
 {
 	return(a->top == (MAX_STACK_SIZE - 1));
 }
+
 void push(StackType *a, element item)
 {
 	if (is_full(a))
 	{
-		fprintf(stderr, "½ºÅÃ Æ÷È­ ¿¡·¯\n");
+		fprintf(stderr, "ìŠ¤íƒ í¬í™” ì—ëŸ¬\n");
 		return;
 
 	}
 	else a->stack[++(a->top)] = item;
 }
-//»èÁ¦ ÇÔ¼ö
+//ì‚­ì œ í•¨ìˆ˜
 void printStack(StackType *a) {
 
 	int i = a->top;
 	for (; -1< i; i--)
 	{
-		printf("%d ¹øÂ° ¿ø¼Ò {%hd, %hd}\n", i, a->stack[i].r, a->stack[i].c);
+		printf("%d ë²ˆì§¸ ì›ì†Œ {%hd, %hd}\n", i, a->stack[i].r, a->stack[i].c);
 	}
 
 }
 element pop(StackType *a) {
 	if (is_empty(a))
 	{
-		fprintf(stderr, "½ºÅÃ °ø¹é ¿¡·¯\n");
+		fprintf(stderr, "ìŠ¤íƒ ê³µë°± ì—ëŸ¬\n");
 		exit(1);
 	}
 	else
@@ -60,7 +64,7 @@ element peek(StackType *a) {
 
 	if (is_empty(a))
 	{
-		fprintf(stderr, "½ºÅÃ°ø¹é¿¡·¯");
+		fprintf(stderr, "ìŠ¤íƒê³µë°±ì—ëŸ¬");
 		exit(1);
 	}
 	else return a->stack[a->top];
@@ -102,18 +106,18 @@ void main() {
 		c = here.c;
 		maze[r][c] = '.';
 		maze_print(maze);
-		push_loc(&a, r - 1, c); push_loc(&a, r + 1, c);//À§, ¾Æ·¡
-		push_loc(&a, r - 1, c); push_loc(&a, r, c + 1);// ¿ÞÂÊ, ¿À¸¥ÂÊ
+		push_loc(&a, r - 1, c); push_loc(&a, r + 1, c);//ìœ„, ì•„ëž˜
+		push_loc(&a, r - 1, c); push_loc(&a, r, c + 1);// ì™¼ìª½, ì˜¤ë¥¸ìª½
 		
 		printStack(&a);
 	if (is_empty(&a)) {
-		printf("½ÇÆÐ\n"); return;
+		printf("ì‹¤íŒ¨\n"); return;
 	}
 	else
 		here = pop(&a);
 	}
-	printf("¼º°ø\n");
-	printf("20174222 °íÁö¹Î \n");
+	printf("ì„±ê³µ\n");
+	printf("20174222 ê³ ì§€ë¯¼ \n");
 	system("pause");
 
 
