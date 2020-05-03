@@ -40,7 +40,8 @@ void push(StackType *a, element item)
 	else a->stack[++(a->top)] = item;
 }
 //삭제 함수
-void printStack(StackType *a) {
+void printStack(StackType *a)
+{
 
 	int i = a->top;
 	for (; -1< i; i--)
@@ -49,7 +50,8 @@ void printStack(StackType *a) {
 	}
 
 }
-element pop(StackType *a) {
+element pop(StackType *a)
+{
 	if (is_empty(a))
 	{
 		fprintf(stderr, "스택 공백 에러\n");
@@ -60,8 +62,8 @@ element pop(StackType *a) {
 		return a->stack[(a->top)--];
 	}
 }
-element peek(StackType *a) {
-
+element peek(StackType *a)
+{
 	if (is_empty(a))
 	{
 		fprintf(stderr, "스택공백에러");
@@ -70,7 +72,8 @@ element peek(StackType *a) {
 	else return a->stack[a->top];
 }
 element here = { 1,0 }, entry = { 1,0 };
-char maze[MAZE_SIZE][MAZE_SIZE] = {
+char maze[MAZE_SIZE][MAZE_SIZE] =
+{
 	{'1','1','1','1','1','1'},
 	{'e','0','1','0','0','1'},
 	{'1','0','0','0','1','1'},
@@ -81,27 +84,33 @@ char maze[MAZE_SIZE][MAZE_SIZE] = {
 void push_loc(StackType *a, int r, int c)
 {
 	if (r < 0 || c < 0) return;
-	if (maze[r][c] != '1'&& maze[r][c] != '.') {
+	if (maze[r][c] != '1'&& maze[r][c] != '.')
+	{
 		element temp;
 		temp.r = r;
 		temp.c = c;
 		push(a,temp);
 	}
 }
-void maze_print(char m[MAZE_SIZE][MAZE_SIZE]){
-
+void maze_print(char m[MAZE_SIZE][MAZE_SIZE]
+{
 	printf("\n");
-	for (int r = 0; r < MAZE_SIZE; r++) {
-		for (int c = 0; c < MAZE_SIZE; c++) {
+	for (int r = 0; r < MAZE_SIZE; r++)
+	{
+		for (int c = 0; c < MAZE_SIZE; c++)
+		{
 			printf("%c", maze[r][c]);
 		}
 		printf("\n");
 	}
 }
-void main() {
-	int r, c;		StackType a;
+void main()
+{
+	int r, c;		
+	StackType a;
 	init_stack(&a); here = entry;
-	while (maze[here.r][here.c] != 'x') {
+	while (maze[here.r][here.c] != 'x')
+	{
 		r = here.r;
 		c = here.c;
 		maze[r][c] = '.';
@@ -110,11 +119,12 @@ void main() {
 		push_loc(&a, r - 1, c); push_loc(&a, r, c + 1);// 왼쪽, 오른쪽
 		
 		printStack(&a);
-	if (is_empty(&a)) {
-		printf("실패\n"); return;
-	}
-	else
-		here = pop(&a);
+		if (is_empty(&a))
+		{
+			printf("실패\n"); return;
+		}
+		else
+			here = pop(&a);
 	}
 	printf("성공\n");
 	printf("20174222 고지민 \n");
