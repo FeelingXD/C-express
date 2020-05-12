@@ -1,6 +1,5 @@
-root=true 
 [*]
 end_of_line = crlf
-charset = utf-8-BOM
+
 [*.xml]
 indent_style = space

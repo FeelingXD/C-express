@@ -1,6 +1,6 @@
-#define MAX_STACK_SIZE 100
+ï»¿#define MAX_STACK_SIZE 100
 #include <stdio.h>
-typedef int element;
+typedef int  element;
 typedef struct{
 	element stack[MAX_STACK_SIZE];
 	int top;
@@ -9,12 +9,12 @@ void init_stack(StackType *a)
 {
 	a->top = -1;
 }
-//°ø¹é °ËÃâ
+//ê³µë°± ê²€ì¶œ
 int is_empty(StackType *a)
 {
 	return(a->top == -1);
 }
-//Æ÷È­ »óÅÂ°ËÃâ
+//í¬í™” ìƒíƒœê²€ì¶œ
 int is_full(StackType *a)
 {
 	return(a->top == (MAX_STACK_SIZE - 1));
@@ -23,24 +23,24 @@ void push(StackType *a, element item)
 {
 	if (is_full(a))
 	{
-		fprintf(stderr, "½ºÅÃ Æ÷È­ ¿¡·¯\n");
+		fprintf(stderr, "ìŠ¤íƒ í¬í™” ì—ëŸ¬\n");
 		return;
 
 	}
 	else a->stack[++(a->top)] = item;
 }
-//»èÁ¦ ÇÔ¼ö
+//ì‚­ì œ í•¨ìˆ˜
 void printStack(StackType *a) {
 
 	int i = a->top;
 	for (;0<=i;i--) {
-		printf("%d ¹øÂ° ¿ø¼Ò %d\n",i,a->stack[i]);
+		printf("%d ë²ˆì§¸ ì›ì†Œ %d\n",i,a->stack[i]);
 	}
 }
 element pop(StackType *a) {
 	if (is_empty(a))
 	{
-		fprintf(stderr, "½ºÅÃ °ø¹é ¿¡·¯\n");
+		fprintf(stderr, "ìŠ¤íƒ ê³µë°± ì—ëŸ¬\n");
 		exit(1);
 	}
 	else
@@ -52,7 +52,7 @@ element peek(StackType *a) {
 
 	if (is_empty(a))
 	{
-		fprintf(stderr, "½ºÅÃ°ø¹é¿¡·¯");
+		fprintf(stderr, "ìŠ¤íƒê³µë°±ì—ëŸ¬");
 		exit(1);
 	}
 	else return a->stack[a->top];
@@ -67,9 +67,9 @@ void main() {
 	printf("%d\n", pop(&stack));
 	printf("%d\n", pop(&stack));
 	printf("%d\n", pop(&stack));
-	printf("%d ==  1ÀÌ¸é Âü 0ÀÌ¸é °ÅÁş\n", is_empty(&stack));
+	printf("%d ==  1ì´ë©´ ì°¸ 0ì´ë©´ ê±°ì§“\n", is_empty(&stack));
 
-	printf("2017422 °íÁö¹Î");
+	printf("2017422 ê³ ì§€ë¯¼");;
 	getchar();
 
 }
