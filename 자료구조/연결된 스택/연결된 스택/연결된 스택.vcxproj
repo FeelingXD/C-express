@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{A1055AD3-0CF0-4291-99E2-C5C7C3095FE6}</ProjectGuid>
-    <RootNamespace>리스트61구현</RootNamespace>
+    <ProjectGuid>{AF01AD9A-DC48-4F2B-99CB-2A70674158E3}</ProjectGuid>
+    <RootNamespace>연결된스택</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>리스트6-2 구현</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
