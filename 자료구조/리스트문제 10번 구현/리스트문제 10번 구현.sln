@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "리스트문제 10번 구현", "리스트문제 10번 구현\리스트문제 10번 구현.vcxproj", "{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Debug|x64.ActiveCfg = Debug|x64
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Debug|x64.Build.0 = Debug|x64
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Debug|x86.Build.0 = Debug|Win32
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Release|x64.ActiveCfg = Release|x64
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Release|x64.Build.0 = Release|x64
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Release|x86.ActiveCfg = Release|Win32
+		{04BD27BD-1910-4C21-B6D3-E8DA8A16B0AB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74D04FF2-158C-4FF7-A862-2BEEACAFB389}
+	EndGlobalSection
+EndGlobal
