@@ -13,29 +13,27 @@ ListNode* create_Node(int x)
 	p->link = NULL;
 	return p;
 }
-ListNode* insert_first(ListNode** head, ListNode* p) {
+void insert_first(ListNode** head, ListNode* p) {
 
-	ListNode* tmp = *head;
+	ListNode* tmp = malloc(sizeof(ListNode));
 	if (*head == NULL)
 	{
 		*head = p;
-		p->link = p;
+		p->link=p;
 	}
-	else {
-		p->link = (*head)->link;
-		(*head)->link = p;
-	}
-
+	p->link = (*head)->link;
+	(*head)->link = p;
 }
-void display(ListNode* head)
+void display(ListNode** phead, ListNode* p)
 {
-	ListNode* p = head;
-	while (p != NULL)
-	{
+	while (1) {
+		do {
+			printf("%d->", p->data);
+			p = p->link;
+		} while (p != *phead);
 		printf("%d->", p->data);
 		p = p->link;
 	}
-	printf("\n");
 }
 int main() {
 
@@ -50,5 +48,5 @@ int main() {
 	tmpNode = create_Node(1);
 	insert_first(&list, tmpNode);
 
-	display(list);
+	display(&list,tmpNode);
 }
