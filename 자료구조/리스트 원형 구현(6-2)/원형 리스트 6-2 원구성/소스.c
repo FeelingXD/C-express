@@ -24,13 +24,13 @@ void insert_first(ListNode** head, ListNode* p) {
 	p->link = (*head)->link;
 	(*head)->link = p;
 }
-void display(ListNode** phead, ListNode* p)
+void display(ListNode** head, ListNode* p)
 {
 	while (1) {
 		do {
 			printf("%d->", p->data);
 			p = p->link;
-		} while (p != *phead);
+		} while (p != *head);
 		printf("%d->", p->data);
 		p = p->link;
 	}
