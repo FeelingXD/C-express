@@ -87,5 +87,6 @@ int main() {
 		insert_first(&list, tmpNode);
 	}
 	search(&list, 4);
+
 	printf("연결 리스트 노드의 개수 = %d", get_size(&list));
 }
