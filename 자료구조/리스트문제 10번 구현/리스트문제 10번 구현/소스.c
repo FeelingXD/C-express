@@ -54,6 +54,5 @@ int main() {
 		tmpNode = create_node(data);
 		insert_node(&list, NULL, tmpNode);
 	}
-	printf("연결 리스트 노드의 개수 = %d", size);
-	
+	printf("연결 리스트 노드의 개수 = %d", size);	
 }
