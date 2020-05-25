@@ -71,6 +71,7 @@ return 0;
 
 }
 int main() {
+
 	ListNode* list = NULL;
 	ListNode* tmpNode = NULL;
 	int size;
@@ -78,6 +79,7 @@ int main() {
 	printf("노드의 개수 : ");
 	scanf(" %d", &size);
 	getchar();
+
 	for (int i = 0; i+1 <= size; i++)
 	{
 		printf("노드의 #%d 데이터 : ", i+1);
