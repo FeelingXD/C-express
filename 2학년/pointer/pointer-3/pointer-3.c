@@ -19,6 +19,4 @@ int main(void)
 	printf("증가후 : %d %d %d\n", pc, pi, pd);
 	printf("pc+2=%d pi +2= %d pd +2 =%d\n", pc+2, pi+2, pd+2);
 
-
-
 }
