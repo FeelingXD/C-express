@@ -3,7 +3,7 @@
 
 int main() {
 
-	int wc = count_world("the c book...");
+	int wc = count_word("the c book...");
 	printf("단어의 개수 : %d\n", wc);
 
 	return 0;
