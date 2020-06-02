@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fcopy1.c">
+    <ClCompile Include="score.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{DD92C41D-7534-40B3-8BE9-870992396A57}</ProjectGuid>
-    <RootNamespace>My153</RootNamespace>
+    <ProjectGuid>{8915B707-4510-40B6-AE6D-7F6C9097A4F4}</ProjectGuid>
+    <RootNamespace>My156</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,7 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="fcopy1.c" />
+    <ClCompile Include="binary1.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
