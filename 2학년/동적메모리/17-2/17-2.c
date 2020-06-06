@@ -8,7 +8,7 @@ int main(void)
 	students = 0;
 
 	printf("학생의수 : ");
-	scanf("%d", students);
+	scanf("%d", &students);
 
 	list = malloc(students * sizeof(int));
 	if (list == NULL)
