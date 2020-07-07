@@ -58,9 +58,7 @@ element pop(StackType *a)
 		exit(1);
 	}
 	else
-	{
 		return a->stack[(a->top)--];
-	}
 }
 element peek(StackType *a)
 {
@@ -70,10 +68,14 @@ element peek(StackType *a)
 		fprintf(stderr, "스택공백에러");
 		exit(1);
 	}
-	else return a->stack[a->top];
+	
+	else
+		return a->stack[a->top];
 }
+
 element here = { 1,0 }, entry = { 1,0 };
-char maze[MAZE_SIZE][MAZE_SIZE] = {
+char maze[MAZE_SIZE][MAZE_SIZE] = 
+{
 	{'1','1','1','1','1','1'},
 	{'e','0','1','0','0','1'},
 	{'1','0','0','0','1','1'},
@@ -81,9 +83,11 @@ char maze[MAZE_SIZE][MAZE_SIZE] = {
 	{'1','0','1','0','0','x'},
 	{'1','1','1','1','1','1'},
 };
+
 void push_loc(StackType *a, int r, int c)
 {
 	if (r < 0 || c < 0) return;
+	
 	if (maze[r][c] != '1'&& maze[r][c] != '.')
 	{
 		element temp;
@@ -95,7 +99,8 @@ void push_loc(StackType *a, int r, int c)
 void maze_print(char m[MAZE_SIZE][MAZE_SIZE])
 {
 	printf("\n");
-	for (int r = 0; r < MAZE_SIZE; r++) {
+	for (int r = 0; r < MAZE_SIZE; r++) 
+	{
 		for (int c = 0; c < MAZE_SIZE; c++)
 		{
 			printf("%c", maze[r][c]);
@@ -103,10 +108,14 @@ void maze_print(char m[MAZE_SIZE][MAZE_SIZE])
 		printf("\n");
 	}
 }
+
 void main()
 {
-	int r, c;		StackType a;
-	init_stack(&a); here = entry;
+	int r, c;		
+	StackType a;
+	init_stack(&a); 
+	here = entry;
+	
 	while (maze[here.r][here.c] != 'x')
 	{
 		r = here.r;
@@ -118,15 +127,11 @@ void main()
 		
 		printStack(&a);
 	if (is_empty(&a))
-	{
 		printf("실패\n"); return;
-	}
 	else
 		here = pop(&a);
-	}
+		
 	printf("성공\n");
 	printf("20174222 고지민 \n");
 	system("pause");
-
-
 }
