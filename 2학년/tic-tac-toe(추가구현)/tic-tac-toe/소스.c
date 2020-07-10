@@ -14,11 +14,12 @@ int main(void)
 	int quit = 0;
 
 	init_board(board);
-	do {
+	do 
+	{
 		disp_board(board);
 
 		quit = get_player_move(0, board);
-		if (quit == 1)break;
+		if (quit == 1) break;
 		quit = Bingo(board);
 		disp_board(board);
 
@@ -29,24 +30,27 @@ int main(void)
 	} while (quit == 0);
 	return 0;
 }
-void init_board(char board[][3])// ¹è¿­ÃÊ±âÈ­ 
+
+void init_board(char board[][3])// ë°°ì—´ì´ˆê¸°í™” 
 {
-	int x, y;
-	for (x = 0; x < 3; x++)
+	for (int x = 0; x < 3; x++)
 	{
-		for (y = 0; y < 3; y++) board[x][y] = ' ';
+		for (int y = 0; y < 3; y++) 
+		{
+			board[x][y] = ' ';
+		}
 	}
 }
-int get_player_move(int player, char board[3][3]) //1ÀÌ¸é Á¾·á 0¹ÝÈ¯½Ã °è¼Ó
+int get_player_move(int player, char board[3][3]) //1ì´ë©´ ì¢…ë£Œ 0ë°˜í™˜ì‹œ ê³„ì†
 {
 	int x, y, done = 0;
 	while (done != 1)
 	{
-		printf("(x,y) ÁÂÇ¥ (Á¾·á -1 ,-1)");
+		printf("(x,y) ì¢Œí‘œ (ì¢…ë£Œ -1 ,-1)");
 		scanf("%d %d", &x, &y);
 		if (x == -1 && y == -1) return 1;
 		if (board[x][y] == ' ') break;
-		else printf("Àß¸øµÈ À§Ä¡ÀÔ´Ï´Ù.\n");
+		else printf("ìž˜ëª»ëœ ìœ„ì¹˜ìž…ë‹ˆë‹¤.\n");
 	}
 	if (player == 0) board[x][y] = 'X';
 
@@ -54,8 +58,7 @@ int get_player_move(int player, char board[3][3]) //1ÀÌ¸é Á¾·á 0¹ÝÈ¯½Ã °è¼Ó
 }
 void disp_board(char board[3][3])
 {
-	int i;
-	for (i = 0; i < 3; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		printf("---l---l---l\n");
 		printf("%c  l %c  l %c  \n", board[i][0], board[i][1], board[i][2]);
@@ -63,7 +66,7 @@ void disp_board(char board[3][3])
 	printf("---l---l---l\n");
 
 }
-int system_move(int player,char board[3][3])// ÄÄÇ»ÅÍ 
+int system_move(int player,char board[3][3])// ì»´í“¨í„° 
 {
 	for (int i = 0; i < 3; i++)
 	{
@@ -73,31 +76,31 @@ int system_move(int player,char board[3][3])// ÄÄÇ»ÅÍ
 			{
 				board[i][j] = '0';
 				return  0;
-				
 			}
 		}
 	}
-	
 }
+
 int Bingo(char board[3][3])
 {
 	char win = ' ';
 	for (int i = 0; i < 3; i++) {
-		if ((((board[0][0]) == (board[1][1]) == (board[2][2])) || ((board[0][2]) == (board[2][0]) == (board[1][1]))) != ' ') //´ë°¢ºù°í°Ë»ç
+		if ((((board[0][0]) == (board[1][1]) == (board[2][2])) || ((board[0][2]) == (board[2][0]) == (board[1][1]))) != ' ') //ëŒ€ê°ë¹™ê³ ê²€ì‚¬
 		{
 			win = board[0][0];
-				printf("%c ½Â¸®", &board[1][1]);
-				return 1;
+			printf("%c ìŠ¹ë¦¬", &board[1][1]);
+			return 1;
 		}
-		else if ((board[i][0] == board[i][1] == board[i][2])!= ' ') {
+		else if ((board[i][0] == board[i][1] == board[i][2])!= ' ')
+		{
 			win = board[i][0];
-			printf("%c ½Â¸®", &board[i][0]);
+			printf("%c ìŠ¹ë¦¬", &board[i][0]);
 			return 1;
 		}
 		else if ((board[0][i] == board[1][i] == board[2][i])!= ' ')
 		{
 			win= board[0][i];
-			printf("%c ½Â¸®", &board[0][i]);
+			printf("%c ìŠ¹ë¦¬", &board[0][i]);
 			return 1;
 		}
 	}
