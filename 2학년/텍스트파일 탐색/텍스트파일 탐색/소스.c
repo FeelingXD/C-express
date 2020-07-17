@@ -3,39 +3,33 @@
 #include <string.h>
 
 int main() {
-
-
 	FILE*fp;
 	char fname[128];
 	char buffer[256];
 	char word[256];
 	int line_num = 0;
 
-
-	printf("ÀÔ·Â ÆÄÀÏ ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À : ");
+	printf("ì…ë ¥ íŒŒì¼ ì´ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤ : ");
 	scanf("%s", fname);
 	
-	
-	printf("Å½»öÇÒ ´Ü¾î¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+	printf("íƒìƒ‰í•  ë‹¨ì–´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 	scanf("%s", word);
 
 	if ((fp = fopen(fname, "r")) == NULL) {
-
-		printf("ÆÄÀÏ %sÀ» ¿­¼ö¾ø½À´Ï´Ù.\n", fname);
+		printf("íŒŒì¼ %sì„ ì—´ìˆ˜ì—†ìŠµë‹ˆë‹¤.\n", fname);
 		system("pause");
 		exit(1);
 	}
+	
 	while (fgets(buffer, 256, fp)){
 		line_num++;
-		if (strstr(buffer, word)) {
-			printf("%s : %d¹øÂ°ÁÙ¿¡¼­ ´Ü¾î %sÀÌ ¹ß°ßµÇ¾ú½À´Ï´Ù.\n", fname, line_num, word);
-
-		}
+		if (strstr(buffer, word))
+			printf("%s : %dë²ˆì§¸ì¤„ì—ì„œ ë‹¨ì–´ %sì´ ë°œê²¬ë˜ì—ˆìŠµë‹ˆë‹¤.\n", fname, line_num, word);
 	}
+	
 	fclose(fp);
-	printf("20174222 °íÁö¹Î");
+	printf("20174222 ê³ ì§€ë¯¼");
 	system("pause");
-
 	
 	return 0;
 }
